@@ -1,12 +1,14 @@
 <h3> edit todo </h3>
 
 <% if @todo.errors.any? %>
-	<h3 style="color: red"> the following error pervented the todo from being saved: </h3>
-	<ul>
-		<% @todo.errors.full_messages.each do |msg| %>
-			<li style="color: red"> <%= msg %> </li>
-		<% end %>
-	</ul>
+	<div class="errors">
+		<h3> the following error pervented the todo from being saved: </h3>
+		<ul>
+			<% @todo.errors.full_messages.each do |msg| %>
+				<li style="color: red"> <%= msg %> </li>
+			<% end %>
+		</ul>
+	</div>
 <% end %>
 
 <%= form_for(@todo) do |f| %>
@@ -24,3 +26,5 @@
 		<%= f.submit %>
 	</p>
 <% end %>
+
+<%= link_to "back to all todos", todos_path %>

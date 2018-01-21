@@ -2,3 +2,6 @@
 	<h3> <%= @todo.name %> </h3>
 	<p> <%= @todo.description %> </p>
 </div>
+
+<%= link_to "edit this todo", edit_todo_path(@todo) %> / 
+<%= link_to "back to all todos", todos_path %>

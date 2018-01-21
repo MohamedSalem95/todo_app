@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+html {
+	font-family: 'Lato', Arial, sans-ferif;
+	color: #555;
+}
+
+.errors {
+	width: 400px;
+	padding: 15px;
+
+	color: red;
+	border-radius: 5px;
+	border: 2px solid red;
+	background-color: #fff;
+
+}
+
+.errors ul {
+	margin: 0;
+	padding: 0;
+}
